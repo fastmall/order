@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.jeongen.fastmall.order;
+
+option go_package = "./;api";
+
+service OrderService {
+  rpc GetOrderDetail (GetOrderDetailRequest) returns (GetOrderDetailResponse) {}
+}
+
+
+message GetOrderDetailRequest {
+  int64 orderId = 1;
+}
+
+
+message GetOrderDetailResponse {
+  int64 orderId = 1;
+}
