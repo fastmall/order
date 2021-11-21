@@ -10,7 +10,11 @@ type OrderService struct {
 }
 
 func (s OrderService) GetOrderDetail(ctx context.Context, req *api.GetOrderDetailRequest) (*api.GetOrderDetailResponse, error) {
-	panic("implement me")
+	res := api.GetOrderDetailResponse{
+		OrderId: req.OrderId,
+	}
+
+	return &res, nil
 }
 
 func (s OrderService) mustEmbedUnimplementedOrderServiceServer() {
